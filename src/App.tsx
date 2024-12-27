@@ -1,14 +1,17 @@
 import { FC } from "react";
 
-import usePortfolioData from "./hooks/usePortfolio";
+import PortfolioProvider from "./components/PortfolioProvider";
+import Navbar from "./components/Navbar";
 
 import "./App.css";
 
 const App: FC = () => {
-  const portfolioData = usePortfolioData();
-  console.log(portfolioData);
-
-  return <div className="App">Hello, World!</div>;
+  return (
+    <PortfolioProvider>
+      <Navbar />
+      <div className="App">Hello, World!</div>
+    </PortfolioProvider>
+  );
 };
 
 export default App;

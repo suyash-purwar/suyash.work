@@ -1,5 +1,4 @@
-import { createClient, type QueryParams } from "next-sanity";
-import { SanityDocument } from "next-sanity";
+import { createClient, SanityDocument, type QueryParams } from "next-sanity";
 
 import ENV from "../../env";
 
@@ -26,7 +25,7 @@ const sanityFetch = async ({
 }: SanityFetchParams): Promise<SanityFetchResponse> => {
   try {
     const data = await client.fetch(query, params);
-    return { isError: false, data };
+    return { isError: false, data, error: null };
   } catch (error) {
     console.log(error);
     return { isError: true, data: null, error };
