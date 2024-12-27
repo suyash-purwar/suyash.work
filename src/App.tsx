@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import usePortfolioData from "./hooks/usePortfolioData";
+import usePortfolioData from "./hooks/usePortfolio";
 
 import "./App.css";
 
