@@ -2,12 +2,12 @@ import { createClient, SanityDocument, type QueryParams } from "next-sanity";
 
 import ENV from "../../env";
 
-export interface SanityFetchParams {
+interface SanityFetchParams {
   query: string;
   params?: QueryParams;
 }
 
-export interface SanityFetchResponse {
+interface SanityFetchResponse {
   isError: boolean;
   data: SanityDocument[] | null;
   error?: unknown;
